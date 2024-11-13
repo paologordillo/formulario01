@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Voluntarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="formulario" method="post" action="#" onsubmit="event.preventDefault(); document.getElementById('agradecimiento').style.display = 'block';">
+            <h3>Registro de Voluntarios</h3>
+
+            <div class="form-group">
+                <label for="nombreCompleto">Nombre Completo</label>
+                <input id="nombreCompleto" type="text" required minlength="8" maxlength="22">
+            </div>
+
+            <div class="form-group">
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input id="correoElectronico" type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono</label>
+                <input id="telefono" type="tel" required pattern="[0-9]+">
+            </div>
+
+            <div class="form-group">
+                <label for="areaInteres">Área de Interés</label>
+                <select id="areaInteres" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option>Educación</option>
+                    <option>Animales de la calle</option>
+                    <option>Medio Ambiente</option>
+                    <option>Salud</option>
+                    <option>Apoyo Social</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Días Disponibles</label>
+                <label><input type="checkbox" name="diasDisponibles" value="lunes"> Lunes</label>
+                <label><input type="checkbox" name="diasDisponibles" value="martes"> Martes</label>
+                <label><input type="checkbox" name="diasDisponibles" value="miércoles"> Miércoles</label>
+                <label><input type="checkbox" name="diasDisponibles" value="jueves"> Jueves</label>
+                <label><input type="checkbox" name="diasDisponibles" value="viernes"> Viernes</label>
+                <label><input type="checkbox" name="diasDisponibles" value="sábado"> Sábado</label>
+                <label><input type="checkbox" name="diasDisponibles" value="domingo"> Domingo</label>
+            </div>
+
+            <div class="form-group">
+                <label for="experienciaPrevia">Experiencia Previa</label>
+                <textarea id="experienciaPrevia" rows="3" placeholder="Escribe aquí..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="fotoPerfil">Sube una Foto</label>
+                <input id="fotoPerfil" type="file" accept=".jpg, .jpeg, .png">
+            </div>
+
+            <div class="form-group">
+                <label><input type="checkbox" required> Acepto los términos y condiciones</label>
+            </div>
+
+            <button type="submit" id="submitBtn">Enviar Información</button>
+        </form>
+
+        <div class="agradecimiento" id="agradecimiento">
+            <p>¡Gracias por tu interés en ser voluntario! Nos pondremos en contacto contigo pronto.</p>
+            <p>Por favor, actualiza la página para ingresar otro registro.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
